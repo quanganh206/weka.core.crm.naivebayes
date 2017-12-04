@@ -2,6 +2,7 @@
 
 Use Weka and apply basic modeling with the Naive Bayes to obtain our own baseline AUC scores.
 
+```bash
 Start processing...
 Naive Bayes
 	churn: 0.5903249542948283
@@ -11,3 +12,4 @@ Naive Bayes
 
 Processing Time: PT50.935S
 End processing...
+```
