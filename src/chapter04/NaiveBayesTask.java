@@ -2,6 +2,9 @@ package chapter04;
 
 import weka.core.converters.CSVLoader;
 import java.io.File;
+import java.time.Duration;
+import java.time.Instant;
+
 import weka.core.Instances;
 import weka.filters.unsupervised.attribute.RemoveType;
 import weka.filters.Filter;
@@ -14,11 +17,15 @@ import weka.classifiers.bayes.NaiveBayes;
 public class NaiveBayesTask {
 	public static void main(String args[]) throws Exception {
 		System.out.println("Start processing...");
+		Instant start = Instant.now();
 		
 		Classifier baselineNB = new NaiveBayes();
 		double resNB[] = evaluate(baselineNB);
-		System.out.println("Naive Bayes\n" + "\tchurn: " + resNB[0] + "\n" + "\tappetency: " + resNB[1] + "\n" + "\tup-sell: " + resNB[2] + "\n" + "\toverall: " + resNB[3] + "\n");
-
+		System.out.println("Naive Bayes\n" + "\tchurn: " + resNB[0] + "\n" + "\tappetency: " + resNB[1] + "\n"
+				+ "\tup-sell: " + resNB[2] + "\n" + "\toverall: " + resNB[3] + "\n");
+		
+		Instant end = Instant.now();
+		System.out.println("Processing Time: " + Duration.between(start, end));
 		System.out.println("End processing...");
 	}
 
