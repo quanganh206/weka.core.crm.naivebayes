@@ -28,7 +28,7 @@ public class EnsembleTask {
 	public static void main(String args[]) throws Exception {
 		System.out.println("Start processing...");
 		Instant start = Instant.now();
-		
+				
 		EnsembleLibrary ensembleLib = new EnsembleLibrary();
 
 		// Decision trees
@@ -47,17 +47,8 @@ public class EnsembleTask {
 		// LogitBoost
 		ensembleLib.addModel("weka.classifiers.meta.LogitBoost");
 
-		// SVM
-//		ensembleLib.addModel("weka.classifiers.functions.SMO");
-
-		// Logistic regression
-//		ensembleLib.addModel("weka.classifiers.functions.Logistic");
-
-		// Simple logistic regression
-//		ensembleLib.addModel("weka.classifiers.functions.SimpleLogistic");
-
-		EnsembleLibrary.saveLibrary(new File("data/ensembleLib.model.xml"), ensembleLib, null);
 		System.out.println(ensembleLib.getModels());
+		EnsembleLibrary.saveLibrary(new File("data/ensembleLib.model.xml"), ensembleLib, null);
 
 		EnsembleSelection ensambleSel = new EnsembleSelection();
 		ensambleSel.setOptions(new String[] { "-L", "data/ensembleLib.model.xml", // </path/to/modelLibrary> - Specifies

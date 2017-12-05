@@ -8,7 +8,5 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/anhlq/Downloads/stable-3-8/weka/weka.jar"/>
 	<classpathentry kind="lib" path="/Users/anhlq/Downloads/stable-3-8/addons/ensembleLibrary1.0.6/ensembleLibrary.jar"/>
-	<classpathentry kind="lib" path="/home/anhlq/working/weka/stable-3-8/weka/weka.jar"/>
-	<classpathentry kind="lib" path="/home/anhlq/working/weka/ensembleLibrary1.0.6/ensembleLibrary.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
