@@ -48,13 +48,13 @@ public class EnsembleTask {
 		ensembleLib.addModel("weka.classifiers.meta.LogitBoost");
 
 		// SVM
-		ensembleLib.addModel("weka.classifiers.functions.SMO");
+//		ensembleLib.addModel("weka.classifiers.functions.SMO");
 
 		// Logistic regression
-		ensembleLib.addModel("weka.classifiers.functions.Logistic");
+//		ensembleLib.addModel("weka.classifiers.functions.Logistic");
 
 		// Simple logistic regression
-		ensembleLib.addModel("weka.classifiers.functions.SimpleLogistic");
+//		ensembleLib.addModel("weka.classifiers.functions.SimpleLogistic");
 
 		EnsembleLibrary.saveLibrary(new File("data/ensembleLib.model.xml"), ensembleLib, null);
 		System.out.println(ensembleLib.getModels());
